@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Attendance System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#home" aria-label="AI Attendance System home">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+        <span>AI Attendance System</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#screenshots">Screenshots</a>
+        <a href="#workflow">How It Works</a>
+        <a href="#tech">Tech Stack</a>
+        <a class="mobile-menu-cta" href="https://ai-attendance-system-main.streamlit.app/" target="_blank" rel="noopener noreferrer">Get Started</a>
+      </div>
+
+      <a class="btn btn-primary nav-cta" href="https://ai-attendance-system-main.streamlit.app/" target="_blank" rel="noopener noreferrer">
+        Get Started
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Smart attendance for modern classrooms</p>
+          <h1>AI-Powered Face Recognition Attendance System</h1>
+          <p class="hero-text">
+            Automate class attendance with real-time facial verification, teacher workflows,
+            student enrollment, and clear attendance reports in one simple system.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-large" href="https://ai-attendance-system-main.streamlit.app/" target="_blank" rel="noopener noreferrer">
+              Launch Live App
+            </a>
+            <a class="btn btn-secondary btn-large" href="#screenshots">View Demo</a>
+          </div>
+          <div class="trust-row" aria-label="System highlights">
+            <span>FaceID login</span>
+            <span>Teacher portal</span>
+            <span>Student portal</span>
+          </div>
+        </div>
+
+        <div class="hero-media reveal">
+          <img src="{{ url_for('static', filename='img/demo/main-Landing_page.png') }}" alt="AI Attendance System landing screen">
+        </div>
+      </div>
+    </section>
+
+    <section class="stats" aria-label="Product statistics">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <strong><span class="stat-num" data-target="99">0</span>%</strong>
+          <span>Recognition accuracy target</span>
+        </div>
+        <div class="stat-card">
+          <strong>&lt; <span class="stat-num" data-target="1">0</span> sec</strong>
+          <span>Fast student verification</span>
+        </div>
+        <div class="stat-card">
+          <strong><span class="stat-num" data-target="6">0</span></strong>
+          <span>Teacher workflow screens</span>
+        </div>
+        <div class="stat-card">
+          <strong><span class="stat-num" data-target="2">0</span></strong>
+          <span>Dedicated student screens</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-kicker">Features</p>
+          <h2>Everything needed to run attendance clearly</h2>
+          <p>Real screens from the project show how students and teachers move through the system.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card reveal">
+            <img src="{{ url_for('static', filename='img/demo/student-1.png') }}" alt="Student FaceID login screen">
+            <div>
+              <span class="feature-tag">Student</span>
+              <h3>FaceID attendance login</h3>
+              <p>Students verify identity through the camera before marking attendance, reducing manual entry and proxy attendance.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <img src="{{ url_for('static', filename='img/demo/student-2.png') }}" alt="Student enrolled subjects dashboard">
+            <div>
+              <span class="feature-tag">Student</span>
+              <h3>Subject enrollment dashboard</h3>
+              <p>Students can view enrolled subjects, attendance totals, section details, and unenroll actions from a clean dashboard.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <img src="{{ url_for('static', filename='img/demo/teacher-2.png') }}" alt="Teacher portal attendance tools">
+            <div>
+              <span class="feature-tag">Teacher</span>
+              <h3>Teacher attendance tools</h3>
+              <p>Teachers can select subjects, add photos, run face analysis, clear captures, and use voice attendance controls.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <img src="{{ url_for('static', filename='img/demo/teacher-3.png') }}" alt="Create new subject modal">
+            <div>
+              <span class="feature-tag">Admin</span>
+              <h3>Create and manage subjects</h3>
+              <p>Subject code, subject name, and section setup are handled through focused modals designed for fast classroom setup.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <img src="{{ url_for('static', filename='img/demo/teacher-4.png') }}" alt="Share class link with QR code">
+            <div>
+              <span class="feature-tag">Sharing</span>
+              <h3>QR class joining</h3>
+              <p>Teachers can share a class code and QR link so students can join the correct subject without confusion.</p>
+            </div>
+          </article>
+
+          <article class="feature-card reveal">
+            <img src="{{ url_for('static', filename='img/demo/teacher-5.png') }}" alt="Attendance report confirmation modal">
+            <div>
+              <span class="feature-tag">Reports</span>
+              <h3>Review before saving</h3>
+              <p>Detected attendance results can be reviewed, discarded, or confirmed before they are saved to records.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section" id="screenshots">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-kicker">Screenshots</p>
+          <h2>See each portal in action</h2>
+          <p>Switch between the main student and teacher flows using the real demo images.</p>
+        </div>
+
+        <div class="gallery-shell reveal">
+          <div class="tab-list" role="tablist" aria-label="Screenshot gallery">
+            <button class="tab-btn active" type="button" data-image="{{ url_for('static', filename='img/demo/main-Landing_page.png') }}" data-title="Landing Portal" data-caption="Students and teachers start from a clear two-path landing screen.">Landing</button>
+            <button class="tab-btn" type="button" data-image="{{ url_for('static', filename='img/demo/student-1.png') }}" data-title="Student FaceID" data-caption="Student identity verification uses a camera frame before marking attendance.">FaceID</button>
+            <button class="tab-btn" type="button" data-image="{{ url_for('static', filename='img/demo/student-2.png') }}" data-title="Student Subjects" data-caption="Students track enrolled courses and attendance counts from their dashboard.">Student</button>
+            <button class="tab-btn" type="button" data-image="{{ url_for('static', filename='img/demo/teacher-2.png') }}" data-title="Teacher Portal" data-caption="Teachers can take attendance, manage subjects, and review attendance records.">Teacher</button>
+            <button class="tab-btn" type="button" data-image="{{ url_for('static', filename='img/demo/teacher-6.png') }}" data-title="Manage Subjects" data-caption="Subject cards show class metadata, student counts, and share-code actions.">Subjects</button>
+            <button class="tab-btn" type="button" data-image="{{ url_for('static', filename='img/demo/teacher-5.png') }}" data-title="Attendance Reports" data-caption="Attendance reports are confirmed by the teacher before saving.">Reports</button>
+          </div>
+
+          <div class="gallery-display">
+            <img id="galleryImage" src="{{ url_for('static', filename='img/demo/main-Landing_page.png') }}" alt="Landing Portal screenshot">
+          </div>
+          <div class="gallery-caption">
+            <h3 id="galleryTitle">Landing Portal</h3>
+            <p id="galleryCaption">Students and teachers start from a clear two-path landing screen.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section workflow" id="workflow">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-kicker">How It Works</p>
+          <h2>A simple attendance flow from setup to record</h2>
+          <p>Teachers create the class, students join, and AI-assisted review keeps the final record clean.</p>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="step-card reveal">
+            <span>01</span>
+            <img src="{{ url_for('static', filename='img/demo/teacher-3.png') }}" alt="Create subject form">
+            <h3>Create a subject</h3>
+            <p>Set the subject code, name, and section so attendance can be stored against the right class.</p>
+          </article>
+          <article class="step-card reveal">
+            <span>02</span>
+            <img src="{{ url_for('static', filename='img/demo/teacher-4.png') }}" alt="Share class QR code">
+            <h3>Share class access</h3>
+            <p>Use the class link or QR code to help students join the correct subject quickly.</p>
+          </article>
+          <article class="step-card reveal">
+            <span>03</span>
+            <img src="{{ url_for('static', filename='img/demo/student-1.png') }}" alt="Student face verification">
+            <h3>Verify students</h3>
+            <p>Students use FaceID and teachers can run photo-based analysis to detect present students.</p>
+          </article>
+          <article class="step-card reveal">
+            <span>04</span>
+            <img src="{{ url_for('static', filename='img/demo/teacher-5.png') }}" alt="Attendance report">
+            <h3>Confirm attendance</h3>
+            <p>Review the generated report, then confirm and save the attendance result with confidence.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tech" id="tech">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-kicker">Technology</p>
+          <h2>Built for practical AI attendance workflows</h2>
+          <p>The landing page presents the Streamlit application as a polished product experience.</p>
+        </div>
+
+        <div class="tech-grid">
+          <article class="tech-card reveal">
+            <h3>Flask frontend</h3>
+            <p>Lightweight Python routing serves the landing page and local static assets.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Face verification workflow</h3>
+            <p>Student FaceID and teacher review screens explain how visual identity checks support attendance.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Streamlit live app</h3>
+            <p>Every CTA opens the deployed AI Attendance System in a new tab for direct use.</p>
+          </article>
+          <article class="tech-card reveal">
+            <h3>Responsive HTML, CSS, JS</h3>
+            <p>The page includes mobile navigation, reveal animations, counters, and a tabbed screenshot gallery.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container cta-box reveal">
+        <p class="section-kicker">Ready to try it?</p>
+        <h2>Launch the AI Attendance System live app</h2>
+        <p>Use the deployed Streamlit application for student FaceID, teacher attendance, subject management, and reports.</p>
+        <a class="btn btn-primary btn-large" href="https://ai-attendance-system-main.streamlit.app/" target="_blank" rel="noopener noreferrer">
+          Get Started
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="">
+        <span>AI Attendance System</span>
+      </a>
+      <p>Created by KIRAN_SWAMY. Built with Flask for the AI attendance project showcase.</p>
+      <a href="https://ai-attendance-system-main.streamlit.app/" target="_blank" rel="noopener noreferrer">Live App</a>
+    </div>
+  </footer>
+
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
