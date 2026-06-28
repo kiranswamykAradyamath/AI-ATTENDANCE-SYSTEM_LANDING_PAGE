@@ -55,5 +55,5 @@ http://127.0.0.1:5002/
 The landing page buttons open the deployed Streamlit app:
 
 ```text
-https://ai-attendance-system-main.streamlit.app/
+https://ai-smart-attendance-system-main.streamlit.app/
 ```
